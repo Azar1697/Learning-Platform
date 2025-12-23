@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: learning-platform
+  
+  datasource:
+    url: jdbc:postgresql://localhost:5444/learning_platform_db
+    username: admin
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update # Автоматически создает/обновляет таблицы (для разработки ок)
+    show-sql: true     # Чтобы мы видели SQL запросы в консоли (важно для обучения!)
+    properties:
+      hibernate:
+        format_sql: true # Красивый вывод SQL
+        # dialect: org.hibernate.dialect.PostgreSQLDialect # Обычно Spring определяет сам
